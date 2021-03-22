@@ -9,6 +9,7 @@ const Book = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [book, setBook] = useState(props.book);
+
   let books = useSelector((state) => state.data);
   const dispatch = useDispatch();
   const bookOnChange = (e) => {
@@ -18,11 +19,11 @@ const Book = (props) => {
     books.splice(props.index, 1);
     dispatch(removeBookAction(books));
   };
+
   return (
     <>
       <Row className="justify-content-center mt-3">
-        <span>{book}</span>
-
+        <span key={book}>{book}</span>
         <Button
           variant="warning"
           onClick={handleShow}

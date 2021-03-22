@@ -31,7 +31,7 @@ const BookList = () => {
 
       <div className="mt-4">
         {books.map((book, index) => (
-          <Book key={index} book={book} index={index} />
+          <Book key={book} book={book} index={index} />
         ))}
       </div>
       <Modal show={show} onHide={handleClose}>

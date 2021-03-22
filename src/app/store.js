@@ -1,14 +1,8 @@
 import { createStore } from "redux";
 
 const initialState = {
-  data: ["Harry Potter (example)"],
+  data: ["Harry Potter (example)", "one", "two", "three"],
 };
-
-// const initialState = [
-//   { title: "Harry Potter", price: 20, category: "action", description: "hahahah" },
-//   { title: "Dark Disciple", price: 20, category: "action", description: "hahahah" },
-//   { title: "The Martian", price: 20, category: "action", description: "hahahah" },
-// ];
 
 function books(state = initialState, action) {
   switch (action.type) {
